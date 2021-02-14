@@ -1,0 +1,7 @@
+{
+  "provider": "url-image",
+  "providerOptions": {
+    "sizeLimit": 100000,
+    "includeBaseURL": "https://api.praiaturismo.com"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_categories",
+  "info": {
+    "name": "Product Category",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "icon": {
+      "type": "string",
+      "required": true
+    },
+    "views": {
+      "type": "integer",
+      "default": 0
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "listOfTitles": {
+      "type": "component",
+      "repeatable": true,
+      "component": "market-place.list-of-titles"
+    },
+    "products": {
+      "collection": "product",
+      "via": "category"
+    },
+    "subCategories": {
+      "collection": "product-sub-category",
+      "via": "category"
+    }
+  }
+}

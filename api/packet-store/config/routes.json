@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/packet-stores",
+      "handler": "packet-store.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/packet-stores/count",
+      "handler": "packet-store.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/packet-stores/:id",
+      "handler": "packet-store.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/packet-stores",
+      "handler": "packet-store.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/packet-stores/:id",
+      "handler": "packet-store.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/packet-stores/:id",
+      "handler": "packet-store.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

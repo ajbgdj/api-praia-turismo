@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blog_replies",
+  "info": {
+    "name": "Blog Reply"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "text": {
+      "type": "text",
+      "required": true
+    },
+    "comment": {
+      "model": "blog-comment",
+      "via": "replies"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "blogReplies"
+    }
+  }
+}

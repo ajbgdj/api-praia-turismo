@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "packet_reviews",
+  "info": {
+    "name": "Packet Review",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "review": {
+      "type": "integer",
+      "default": 0,
+      "required": true,
+      "max": 5,
+      "min": 1
+    },
+    "comment": {
+      "type": "string",
+      "required": true
+    },
+    "packet": {
+      "via": "reviews",
+      "model": "packet"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "packetReviews"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_messages",
+  "info": {
+    "name": "Product Message",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "message": {
+      "type": "text"
+    },
+    "answer": {
+      "type": "text"
+    },
+    "product": {
+      "model": "product",
+      "via": "messages"
+    },
+    "receiver": {
+      "via": "messages",
+      "model": "product-store"
+    },
+    "transmitter": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "messages"
+    }
+  }
+}

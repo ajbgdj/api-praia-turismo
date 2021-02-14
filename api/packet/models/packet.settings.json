@@ -1,0 +1,153 @@
+{
+  "kind": "collectionType",
+  "collectionName": "packets",
+  "info": {
+    "name": "Packet",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "ubicacion": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true,
+      "default": 0
+    },
+    "stock": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "salesPackages": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "rooms": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "adults": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "children": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "nights": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "installment": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "views": {
+      "type": "integer",
+      "default": 0
+    },
+    "exit": {
+      "type": "datetime",
+      "required": true
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "offer": {
+      "type": "component",
+      "repeatable": false,
+      "component": "market-place.offer"
+    },
+    "gallerys": {
+      "type": "component",
+      "repeatable": true,
+      "component": "market-place.gallerys"
+    },
+    "video": {
+      "type": "component",
+      "repeatable": false,
+      "component": "market-place.video"
+    },
+    "topBanner": {
+      "type": "component",
+      "repeatable": false,
+      "component": "market-place.top-banner"
+    },
+    "horizontalSlider": {
+      "type": "component",
+      "repeatable": false,
+      "component": "market-place.horizontal-slider"
+    },
+    "about": {
+      "type": "richtext",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": false
+    },
+    "details": {
+      "type": "richtext",
+      "required": true
+    },
+    "feedback": {
+      "type": "component",
+      "repeatable": false,
+      "component": "market-place.feedback"
+    },
+    "tags": {
+      "collection": "packet-tag",
+      "via": "packets"
+    },
+    "reviews": {
+      "collection": "packet-review",
+      "via": "packet"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "packets"
+    },
+    "category": {
+      "model": "packet-category",
+      "via": "packets"
+    },
+    "store": {
+      "model": "packet-store",
+      "via": "packets"
+    }
+  }
+}

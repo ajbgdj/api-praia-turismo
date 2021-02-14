@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "packet_categories",
+  "info": {
+    "name": "Packet Category",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "url": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "icon": {
+      "type": "string",
+      "required": false
+    },
+    "views": {
+      "type": "integer",
+      "default": 0
+    },
+    "packets": {
+      "via": "category",
+      "collection": "packet"
+    }
+  }
+}

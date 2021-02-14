@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "packet_tags",
+  "info": {
+    "name": "Packet Tag",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 20
+    },
+    "views": {
+      "type": "integer",
+      "default": 0
+    },
+    "packets": {
+      "via": "tags",
+      "collection": "packet",
+      "dominant": true
+    }
+  }
+}

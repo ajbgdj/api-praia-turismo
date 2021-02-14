@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_market_place_videos",
+  "info": {
+    "name": "video",
+    "icon": "play",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "platform": {
+      "type": "enumeration",
+      "enum": [
+        "youtube",
+        "vimeo"
+      ],
+      "default": "youtube",
+      "required": true
+    },
+    "id_video": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}

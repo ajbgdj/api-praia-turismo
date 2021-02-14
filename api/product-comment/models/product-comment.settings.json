@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_comments",
+  "info": {
+    "name": "Product Comment",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true,
+      "minLength": 20,
+      "maxLength": 220
+    },
+    "replies": {
+      "collection": "product-reply",
+      "via": "comment"
+    },
+    "product": {
+      "model": "product",
+      "via": "comments"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "productComments"
+    }
+  }
+}

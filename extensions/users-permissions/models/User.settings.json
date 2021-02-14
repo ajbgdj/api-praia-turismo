@@ -1,0 +1,201 @@
+{
+  "kind": "collectionType",
+  "collectionName": "users-permissions_user",
+  "info": {
+    "name": "user",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "timestamps": true
+  },
+  "attributes": {
+    "username": {
+      "type": "string",
+      "minLength": 3,
+      "unique": true,
+      "configurable": false,
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "minLength": 6,
+      "configurable": false,
+      "required": true
+    },
+    "provider": {
+      "type": "string",
+      "configurable": false
+    },
+    "password": {
+      "type": "password",
+      "minLength": 6,
+      "configurable": false,
+      "private": true
+    },
+    "resetPasswordToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmationToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "role": {
+      "model": "role",
+      "via": "users",
+      "plugin": "users-permissions",
+      "configurable": false
+    },
+    "names": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "uid",
+      "targetField": "names"
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "description": {
+      "type": "text",
+      "required": false
+    },
+    "genders": {
+      "type": "enumeration",
+      "enum": [
+        "MALE",
+        "FEMALE",
+        "OTHER"
+      ],
+      "required": true,
+      "default": "MALE"
+    },
+    "dateofbirth": {
+      "type": "date",
+      "required": true
+    },
+    "ci": {
+      "type": "string",
+      "unique": true
+    },
+    "rg": {
+      "type": "string",
+      "unique": true
+    },
+    "rnm": {
+      "type": "string",
+      "unique": true
+    },
+    "cpf": {
+      "type": "string",
+      "unique": true
+    },
+    "country": {
+      "type": "enumeration",
+      "enum": [
+        "VENEZUELA",
+        "BRAZIL",
+        "PERU",
+        "COLOMBIA",
+        "CHILE"
+      ],
+      "required": true,
+      "default": "VENEZUELA"
+    },
+    "nationality": {
+      "type": "enumeration",
+      "enum": [
+        "VENEZUELAN",
+        "BRAZILIAN",
+        "PERUVIAN",
+        "COLOMBIAN",
+        "CHILEAN",
+        "FOREIGN"
+      ]
+    },
+    "telephone": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "blogs": {
+      "via": "user",
+      "collection": "blog"
+    },
+    "products": {
+      "via": "user",
+      "collection": "product"
+    },
+    "packets": {
+      "via": "user",
+      "collection": "packet"
+    },
+    "orders": {
+      "via": "transmitter",
+      "collection": "product-order"
+    },
+    "disputes": {
+      "via": "transmitter",
+      "collection": "product-dispute"
+    },
+    "messages": {
+      "via": "transmitter",
+      "collection": "product-message"
+    },
+    "wishlists": {
+      "via": "user",
+      "collection": "product-wishlist"
+    },
+    "packetStores": {
+      "via": "user",
+      "collection": "packet-store"
+    },
+    "productStores": {
+      "via": "user",
+      "collection": "product-store"
+    },
+    "packetReviews": {
+      "via": "user",
+      "collection": "packet-review"
+    },
+    "productReplies": {
+      "via": "user",
+      "collection": "product-reply"
+    },
+    "productComments": {
+      "via": "user",
+      "collection": "product-comment"
+    },
+    "blogComments": {
+      "via": "user",
+      "collection": "blog-comment"
+    },
+    "blogReplies": {
+      "via": "user",
+      "collection": "blog-reply"
+    }
+  }
+}

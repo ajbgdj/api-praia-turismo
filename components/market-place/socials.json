@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_market_place_socials",
+  "info": {
+    "name": "socials",
+    "icon": "network-wired"
+  },
+  "options": {},
+  "attributes": {
+    "facebook": {
+      "type": "string"
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "linkedin": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    },
+    "youtube": {
+      "type": "string"
+    }
+  }
+}

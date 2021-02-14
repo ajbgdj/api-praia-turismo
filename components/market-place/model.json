@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_market_place_models",
+  "info": {
+    "name": "model",
+    "icon": "drafting-compass",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

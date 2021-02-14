@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_market_place_gallerys",
+  "info": {
+    "name": "gallerys",
+    "icon": "grip-vertical"
+  },
+  "options": {},
+  "attributes": {
+    "gallery": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_market_place_specifications",
+  "info": {
+    "name": "specification",
+    "icon": "sliders-h",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "color": {
+      "type": "component",
+      "repeatable": true,
+      "component": "market-place.color"
+    },
+    "size": {
+      "type": "component",
+      "repeatable": true,
+      "component": "market-place.size"
+    },
+    "model": {
+      "type": "component",
+      "repeatable": true,
+      "component": "market-place.model"
+    }
+  }
+}

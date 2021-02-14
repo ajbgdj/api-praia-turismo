@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_market_place_offers",
+  "info": {
+    "name": "offer",
+    "icon": "toggle-off"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Normal",
+        "Fixed",
+        "Discount"
+      ],
+      "default": "Normal",
+      "required": true
+    },
+    "discount": {
+      "type": "decimal",
+      "required": true
+    },
+    "endofoffer": {
+      "type": "datetime",
+      "required": true
+    }
+  }
+}

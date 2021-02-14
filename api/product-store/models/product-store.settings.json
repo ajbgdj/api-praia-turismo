@@ -1,0 +1,95 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_stores",
+  "info": {
+    "name": "Product Store",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "url": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "telephone": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "cover": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "counter": {
+      "type": "integer",
+      "default": 0
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "about": {
+      "type": "text",
+      "required": true
+    },
+    "shares": {
+      "type": "component",
+      "repeatable": false,
+      "component": "market-place.socials"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "productStores"
+    },
+    "products": {
+      "collection": "product",
+      "via": "store"
+    },
+    "sales": {
+      "via": "store",
+      "collection": "product-sale"
+    },
+    "orders": {
+      "collection": "product-order",
+      "via": "receiver"
+    },
+    "disputes": {
+      "collection": "product-dispute",
+      "via": "receiver"
+    },
+    "messages": {
+      "collection": "product-message",
+      "via": "receiver"
+    }
+  }
+}

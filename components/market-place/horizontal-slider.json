@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_market_place_horizontal_sliders",
+  "info": {
+    "name": "horizontalSlider",
+    "icon": "caret-square-right",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "H4tag": {
+      "type": "string",
+      "required": true
+    },
+    "H3_1tag": {
+      "type": "string",
+      "required": true
+    },
+    "H3_2tag": {
+      "type": "string",
+      "required": true
+    },
+    "H3_3tag": {
+      "type": "string",
+      "required": true
+    },
+    "H3_4tag": {
+      "type": "string",
+      "required": true
+    },
+    "Buttontag": {
+      "type": "string",
+      "required": true
+    },
+    "IMGtag": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}

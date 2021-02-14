@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_market_place_reviews",
+  "info": {
+    "name": "reviews",
+    "icon": "receipt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "review": {
+      "type": "integer"
+    },
+    "comment": {
+      "type": "text"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/packet-reviews",
+      "handler": "packet-review.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/packet-reviews/count",
+      "handler": "packet-review.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/packet-reviews/:id",
+      "handler": "packet-review.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/packet-reviews",
+      "handler": "packet-review.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/packet-reviews/:id",
+      "handler": "packet-review.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/packet-reviews/:id",
+      "handler": "packet-review.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

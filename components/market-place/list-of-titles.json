@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_market_place_list_of_titles",
+  "info": {
+    "name": "listOfTitles",
+    "icon": "list"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

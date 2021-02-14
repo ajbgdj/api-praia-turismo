@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_market_place_tags",
+  "info": {
+    "name": "tags",
+    "icon": "tag",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "views": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

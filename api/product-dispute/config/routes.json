@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/product-disputes",
+      "handler": "product-dispute.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/product-disputes/count",
+      "handler": "product-dispute.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/product-disputes/:id",
+      "handler": "product-dispute.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/product-disputes",
+      "handler": "product-dispute.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/product-disputes/:id",
+      "handler": "product-dispute.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/product-disputes/:id",
+      "handler": "product-dispute.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

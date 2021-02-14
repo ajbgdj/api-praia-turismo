@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_market_place_top_banners",
+  "info": {
+    "name": "topBanner",
+    "icon": "chess-board",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "H3tag": {
+      "type": "string",
+      "required": true
+    },
+    "H4tag": {
+      "type": "string",
+      "required": true
+    },
+    "P1tag": {
+      "type": "string",
+      "required": true
+    },
+    "P2tag": {
+      "type": "string",
+      "required": true
+    },
+    "Spantag": {
+      "type": "string",
+      "required": true
+    },
+    "Buttontag": {
+      "type": "string",
+      "required": true
+    },
+    "IMGtag": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}

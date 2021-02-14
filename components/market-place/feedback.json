@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_market_place_feedbacks",
+  "info": {
+    "name": "feedback",
+    "icon": "star-of-life"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "ANALYZING",
+        "APPROVED",
+        "REPROVED"
+      ],
+      "default": "ANALYZING",
+      "required": true
+    },
+    "comment": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

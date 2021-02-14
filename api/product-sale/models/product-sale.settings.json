@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_sales",
+  "info": {
+    "name": "Product Sale",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "payment_method": {
+      "type": "enumeration",
+      "enum": [
+        "PayPal",
+        "MercadoPago",
+        "PaySafe"
+      ],
+      "default": "PayPal",
+      "required": true
+    },
+    "id_payment": {
+      "type": "string",
+      "required": true
+    },
+    "quantity": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "total": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "unit_price": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "commision": {
+      "type": "decimal"
+    },
+    "store": {
+      "model": "product-store",
+      "via": "sales"
+    },
+    "order": {
+      "model": "product-order",
+      "via": "sale"
+    },
+    "product": {
+      "model": "product",
+      "via": "sales"
+    }
+  }
+}

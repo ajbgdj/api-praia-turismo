@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_disputes",
+  "info": {
+    "name": "Product Dispute",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "answer": {
+      "type": "text"
+    },
+    "message": {
+      "type": "text"
+    },
+    "order": {
+      "model": "product-order",
+      "via": "disputes"
+    },
+    "receiver": {
+      "via": "disputes",
+      "model": "product-store"
+    },
+    "transmitter": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "disputes"
+    }
+  }
+}

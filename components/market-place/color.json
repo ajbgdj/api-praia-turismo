@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_market_place_colors",
+  "info": {
+    "name": "color",
+    "icon": "broom",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

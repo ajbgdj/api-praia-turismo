@@ -1,0 +1,179 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "name": "product",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "url": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "brand": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal",
+      "required": true,
+      "default": 0
+    },
+    "stock": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "salesProducts": {
+      "type": "integer",
+      "default": 0
+    },
+    "shipping": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "deliveryTime": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "views": {
+      "type": "integer",
+      "default": 0
+    },
+    "offer": {
+      "type": "component",
+      "repeatable": false,
+      "component": "market-place.offer"
+    },
+    "specification": {
+      "type": "component",
+      "repeatable": false,
+      "component": "market-place.specification"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "defaultBanner": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "verticalSlider": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "topBanner": {
+      "type": "component",
+      "repeatable": false,
+      "component": "market-place.top-banner"
+    },
+    "horizontalSlider": {
+      "type": "component",
+      "repeatable": false,
+      "component": "market-place.horizontal-slider"
+    },
+    "gallerys": {
+      "type": "component",
+      "repeatable": true,
+      "component": "market-place.gallerys"
+    },
+    "video": {
+      "type": "component",
+      "repeatable": false,
+      "component": "market-place.video"
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "details": {
+      "type": "richtext",
+      "required": true
+    },
+    "summary": {
+      "type": "richtext",
+      "required": true
+    },
+    "feedback": {
+      "type": "component",
+      "repeatable": false,
+      "component": "market-place.feedback"
+    },
+    "reviews": {
+      "type": "component",
+      "repeatable": true,
+      "component": "market-place.reviews"
+    },
+    "tags": {
+      "via": "products",
+      "collection": "product-tag"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "products"
+    },
+    "category": {
+      "via": "products",
+      "model": "product-category"
+    },
+    "subCategory": {
+      "via": "products",
+      "model": "product-sub-category"
+    },
+    "store": {
+      "via": "products",
+      "model": "product-store"
+    },
+    "orders": {
+      "via": "product",
+      "collection": "product-order"
+    },
+    "messages": {
+      "via": "product",
+      "collection": "product-message"
+    },
+    "comments": {
+      "via": "product",
+      "collection": "product-comment"
+    },
+    "wishlists": {
+      "via": "product",
+      "collection": "product-wishlist"
+    },
+    "sales": {
+      "via": "product",
+      "collection": "product-sale"
+    }
+  }
+}

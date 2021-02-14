@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_market_place_sizes",
+  "info": {
+    "name": "size",
+    "icon": "border-style",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

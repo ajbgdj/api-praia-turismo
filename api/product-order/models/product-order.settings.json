@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_orders",
+  "info": {
+    "name": "Product Order",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "answer": {
+      "type": "text",
+      "required": true
+    },
+    "dispute": {
+      "type": "text",
+      "required": true
+    },
+    "stage": {
+      "type": "string",
+      "required": true
+    },
+    "sale": {
+      "via": "order",
+      "model": "product-sale"
+    },
+    "product": {
+      "model": "product",
+      "via": "orders"
+    },
+    "receiver": {
+      "via": "orders",
+      "model": "product-store"
+    },
+    "transmitter": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "orders"
+    },
+    "disputes": {
+      "via": "order",
+      "collection": "product-dispute"
+    }
+  }
+}
